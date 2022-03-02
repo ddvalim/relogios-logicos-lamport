@@ -4,12 +4,10 @@ class Proccess:
         self.__id = id
 
     def set_clock(self, id, value):
-        self.__clock.insert(id, value)
+        self.__clock[id] = value
 
-    @property
     def get_proccess_id(self):
         return self.__id
 
-    @property
     def get_clock(self):
         return self.__clock
