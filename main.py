@@ -49,11 +49,15 @@ def main():
                     clock_value = max(p_receive_clock[i], p_send_clock[i])
                     proccesses[p_receive].set_clock(i, clock_value)
 
+            p_receive_updated_clock = proccesses[p_receive].get_clock()
+
+            p_send_updated_clock = p_send_clock = proccesses[p_send].get_clock()
+
             print('\n--!------!--')
             print('Message Sending Event')
-            print(f'\n Proccess which has sent message clock: {p_send_clock}')
+            print(f'\n Proccess which has sent message clock: {p_send_updated_clock}')
             print(
-                f'Proccess which has received message clock: {p_receive_clock}')
+                f'Proccess which has received message clock: {p_receive_updated_clock}')
 
         counter += 1
 
